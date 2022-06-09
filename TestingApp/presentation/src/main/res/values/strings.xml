@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">OW-Profile</string>
+
+    <string name="splash_name">OW-Profile</string>
+
+    <string name="for_now">지금 바로!</string>
+    <string name="search_your_profile">여러분들의 프로필을 검색해보세요! 🔍</string>
+
+    <string name="locked_profile">🔒 프로필이 비공개 상태입니다.</string>
+    <string name="average_score"><![CDATA[<b>%1$s</b>님의 평균 티어는 ]]></string>
+    <string name="average_score_after">이네요!</string>
+
+    <string name="search_">검색할 서버를 선택하세요 🔍</string>
+
+    <string name="exit_">앱을 종료하시겠습니까?</string>
+    <string name="exit_message">⚠️ 종료를 원치 않으시면 뒤로가기 키를 한번 더 눌러주세요</string>
+    <string name="yes">종료</string>
+
+    <string name="eu_server">유럽 서버</string>
+    <string name="us_server">북미 서버</string>
+    <string name="asia_server">아시아 서버</string>
+</resources>
