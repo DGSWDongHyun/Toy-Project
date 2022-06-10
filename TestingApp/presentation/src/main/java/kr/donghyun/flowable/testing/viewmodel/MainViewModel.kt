@@ -33,11 +33,13 @@ class MainViewModel @Inject constructor(
         viewModelScope.launch {
             when(val result = getProfileUseCase(Pair(searchRegion.value!!, searchBattleTag.value!!))) {
                 is Result.Success -> {
+                    Log.d("TAG", "${result.data}")
                     _profile.postValue(result.data)
                     competitiveRoleAdapter.updateRoleData(result.data.competitiveList)
                     isLoading.postValue(false)
                 }
                 else -> {
+                    Log.d("TAG", "$result")
                     _profile.postValue(null)
                     isLoading.postValue(false)
                 }

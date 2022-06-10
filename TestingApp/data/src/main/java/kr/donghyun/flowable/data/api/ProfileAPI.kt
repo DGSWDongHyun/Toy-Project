@@ -6,7 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface ProfileAPI {
-    @GET("v1/stats/pc/{region}/{battleTag}/profile")
+    @GET("v1/stats/pc/{region}/{battleTag}/complete")
     suspend fun getUserProfile(
         @Path("region") region : String,
         @Path("battleTag") battleTag : String
