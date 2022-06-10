@@ -122,6 +122,12 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
                             profileImage.setGlideImage(this@MainActivity, data.iconImage)
                             userName.text = Html.fromHtml(getString(R.string.average_score, nameOfUser), Html.FROM_HTML_MODE_LEGACY)
                             tierImage.setGlideImage(this@MainActivity, data.ratingIcon)
+                            view.resultCardView.setOnClickListener {
+                                startActivity.postValue(Pair(SearchResultActivity::class, Bundle().apply {
+                                    putString("region", searchRegion.value!!)
+                                    putString("battleTag", searchBattleTag.value!!)
+                                }))
+                            }
                         }
                     }else{
                         view.apply {
@@ -131,6 +137,9 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
                             userName.text = getString(R.string.locked_profile)
                             tierImage.visibility = View.GONE
                             afterText.visibility = View.GONE
+                            view.resultCardView.setOnClickListener {
+                                Snackbar.make(view.root, getString(R.string.locked_profile), Snackbar.LENGTH_SHORT).show()
+                            }
                         }
                     }
                     view.resultCardView.visibility = View.VISIBLE

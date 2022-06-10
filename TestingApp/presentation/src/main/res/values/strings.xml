@@ -19,4 +19,6 @@
     <string name="eu_server">유럽 서버</string>
     <string name="us_server">북미 서버</string>
     <string name="asia_server">아시아 서버</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

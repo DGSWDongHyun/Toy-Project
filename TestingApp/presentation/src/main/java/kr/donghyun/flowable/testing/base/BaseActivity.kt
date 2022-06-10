@@ -30,6 +30,14 @@ abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : AppCompa
     private fun performBinding() {
         viewDataBinding = DataBindingUtil.setContentView(this, layoutRes)
 
+        viewModel.startActivity.observe(this, Observer { activityInfo ->
+            val intent = Intent(this, activityInfo.first.java).apply {
+                if(activityInfo.second != null)
+                    putExtras(activityInfo.second!!)
+            }
+            startActivity(intent)
+        })
+
         viewModel.finishActivity.observe(this, Observer { isFinished ->
             if(isFinished) {
                 finish()

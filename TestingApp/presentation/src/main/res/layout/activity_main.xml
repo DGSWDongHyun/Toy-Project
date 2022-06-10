@@ -44,13 +44,6 @@
                     android:inputType="textPersonName"
                     android:text="@={viewModel.searchBattleTag}" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/ic_baseline_search_24"
-                    android:backgroundTint="@color/material_dynamic_neutral60"
-                    android:onClick="@{() -> viewModel.getSearchedProfile()}" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
