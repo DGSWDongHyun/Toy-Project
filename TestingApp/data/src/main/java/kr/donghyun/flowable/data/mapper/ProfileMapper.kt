@@ -3,6 +3,7 @@ package kr.donghyun.flowable.data.mapper
 import kr.donghyun.flowable.data.model.*
 import kr.donghyun.flowable.domain.data.*
 import kr.donghyun.flowable.domain.data.Hero
+import java.text.SimpleDateFormat
 
 fun ProfileEntity.toMapping() : Profile = Profile(
     competitiveStats = this.competitiveStats.toMapping(),
@@ -63,7 +64,7 @@ fun AverageData.toMapping() : AverageDataEntity = AverageDataEntity(
     barrierPer10min = this.barrierPer10min,
     deathPer10min = this.deathPer10min,
     heroDmgPer10min = this.heroDmgPer10min,
-    timeSpentOnFirePer10min = this.timeSpentOnFirePer10min,
+    timeSpentOnFirePer10min = this.timeSpentOnFirePer10min?.let { time -> SimpleDateFormat("mm:ss").parse(time) },
     healingPer10min = this.healingPer10min,
     soloKillsPer10min = this.soloKillsPer10min
 )

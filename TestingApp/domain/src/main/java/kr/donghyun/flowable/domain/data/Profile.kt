@@ -1,6 +1,7 @@
 package kr.donghyun.flowable.domain.data
 
 import com.google.gson.annotations.SerializedName
+import java.util.*
 
 data class Profile(
     @SerializedName("competitiveStats")
@@ -107,7 +108,7 @@ data class AverageDataEntity(
     @SerializedName("heroDamageDoneAvgPer10Min")
     val heroDmgPer10min : String?,
     @SerializedName("timeSpentOnFireAvgPer10Min")
-    val timeSpentOnFirePer10min : String?,
+    val timeSpentOnFirePer10min : Date?,
     @SerializedName("healingDoneAvgPer10Min")
     val healingPer10min : String?,
     @SerializedName("soloKillsAvgPer10Min")

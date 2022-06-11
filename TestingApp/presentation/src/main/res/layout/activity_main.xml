@@ -75,13 +75,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="25dp"
             android:visibility="gone"
             app:cardCornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/regionButton">
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -186,26 +186,6 @@
                 </LinearLayout>
 
             </FrameLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/regionButton"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="5dp"
-            app:cardCornerRadius="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView">
-
-            <TextView
-                android:id="@+id/regionText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:textSize="12sp" />
         </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

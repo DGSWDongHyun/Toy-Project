@@ -12,6 +12,10 @@
 
     <string name="search_">검색할 서버를 선택하세요 🔍</string>
 
+    <string name="result">프로필 검색 결과는?</string>
+    <string name="result_">검색한 프로필의 가장 최근 상태입니다! 😊</string>
+    <string name="next_">다음으로 가려면 화면을 터치해주세요.. ➡️</string>
+
     <string name="exit_">앱을 종료하시겠습니까?</string>
     <string name="exit_message">⚠️ 종료를 원치 않으시면 뒤로가기 키를 한번 더 눌러주세요</string>
     <string name="yes">종료</string>

@@ -37,32 +37,6 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
         loadingStateChange(view)
     }
 
-    private fun bottomSheetRegion() {
-        if(this::bottomRegionDialog.isInitialized) {
-            bottomRegionDialog.show()
-        }else{
-            val sheetView = FragmentBottomSelectRegionBinding.inflate(LayoutInflater.from(this))
-            bottomRegionDialog = BottomSheetDialog(this, R.style.RoundedBottomSheet).apply {
-                setContentView(sheetView.root)
-                sheetView.apply {
-                    asiaButton.setOnClickListener {
-                        viewModel.searchRegion.postValue("asia")
-                        dismiss()
-                    }
-                    euButton.setOnClickListener {
-                        viewModel.searchRegion.postValue("eu")
-                        dismiss()
-                    }
-                    usButton.setOnClickListener {
-                        viewModel.searchRegion.postValue("us")
-                        dismiss()
-                    }
-                }
-            }
-            bottomRegionDialog.show()
-        }
-    }
-
     private fun bottomExit() {
         if(this::bottomExitDialog.isInitialized) {
             bottomExitDialog.show()
@@ -104,13 +78,6 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
 
     private fun changeStateView(view: ActivityMainBinding) {
         with(viewModel) {
-            view.regionButton.setOnClickListener {
-                bottomSheetRegion()
-            }
-
-            searchRegion.observe(this@MainActivity, Observer {
-                view.regionText.text = bindRegion()
-            })
 
             profile.observe(this@MainActivity, Observer { data ->
                 if(data != null) {
